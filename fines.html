@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Fines | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+<!-- Common Dynamic Navbar -->
+<div id="site-navbar"></div>
+
+<!-- Main Content -->
+<main class="page">
+
+    <section class="page-header">
+        <span class="eyebrow">LNCT LIBRARY</span>
+
+        <h1>My Fines</h1>
+
+        <p>
+            Check your late return fines and book return records.
+        </p>
+    </section>
+
+    <!-- Late Return Policy -->
+    <section class="content-card">
+
+        <h2>Late Return Policy</h2>
+
+        <p>
+            A fine of <strong>₹5 per day</strong> is charged
+            for books returned after their due date.
+        </p>
+
+    </section>
+
+    <!-- Fine Records -->
+    <section class="content-card">
+
+        <h2>Fine Records</h2>
+
+        <div class="table-wrap">
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Student</th>
+                    <th>Return Date</th>
+                    <th>Fine Amount</th>
+                </tr>
+                </thead>
+
+                <tbody id="fines-body">
+                <tr>
+                    <td colspan="4">
+                        Loading fine records...
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Common Footer -->
+<div id="site-footer"></div>
+
+<!-- JavaScript -->
+<script src="/js/navbar.js"></script>
+<script src="/js/footer.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/fines.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+<!-- Student Navigation -->
+<header class="topbar">
+    <a class="brand" href="/">
+        <span class="brand-mark">L</span>
+        <span>
+                LNCT
+                <small>LIBRARY</small>
+            </span>
+    </a>
+
+    <nav>
+        <a href="/dashboard.html" class="active">Dashboard</a>
+        <a href="/books.html">Books</a>
+        <a href="/issued-books.html">Issued Books</a>
+        <a href="/history.html">History</a>
+        <a href="/fines.html">Fines</a>
+        <a href="/profile.html">Profile</a>
+
+        <!-- No Admin Link for Students -->
+        <button
+                type="button"
+                id="logout-btn"
+                class="btn btn-light">
+            Log Out
+        </button>
+    </nav>
+</header>
+
+<!-- Main Dashboard -->
+<main class="page">
+
+    <header class="page-header">
+        <span class="eyebrow">LNCT LIBRARY</span>
+
+        <h1>Student Dashboard</h1>
+
+        <p>
+            Welcome to your LNCT Library Management Dashboard.
+            Check book availability and your issue records.
+        </p>
+    </header>
+
+    <!-- Dashboard Statistics -->
+    <section class="stats cards">
+
+        <div class="stat-card">
+            <span>Total Books</span>
+            <strong id="totalBooks">—</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Available Copies</span>
+            <strong id="availableCopies">—</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Active Issues</span>
+            <strong id="activeIssues">—</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Overdue Books</span>
+            <strong id="overdueIssues">—</strong>
+        </div>
+
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="content-card">
+
+        <h2>Quick Actions</h2>
+
+        <div class="actions">
+
+            <a href="/books.html" class="btn btn-primary">
+                Browse Books
+            </a>
+
+            <a href="/issued-books.html" class="btn btn-light">
+                My Issued Books
+            </a>
+
+            <a href="/history.html" class="btn btn-light">
+                Issue History
+            </a>
+
+            <a href="/fines.html" class="btn btn-light">
+                My Fines
+            </a>
+
+            <a href="/profile.html" class="btn btn-light">
+                My Profile
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="/js/main.js"></script>
+<script src="/js/dashboard.js"></script>
+
+</body>
+</html>

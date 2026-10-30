@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Books | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+
+<!-- Admin Sidebar -->
+<aside class="sidebar">
+
+    <a class="brand" href="/">
+        <span class="brand-mark">L</span>
+        <span>
+        LNCT
+        <small>ADMIN</small>
+      </span>
+    </a>
+
+    <nav>
+        <a class="side-link" href="/admin/index.html">
+            Overview
+        </a>
+
+        <a class="side-link active" href="/admin/books.html">
+            Manage Books
+        </a>
+
+        <a class="side-link" href="/admin/students.html">
+            Students
+        </a>
+
+        <a class="side-link" href="/admin/issue-books.html">
+            Issues &amp; Returns
+        </a>
+
+        <a class="side-link" href="/admin/returns.html">
+            Returns
+        </a>
+
+        <a class="side-link" href="/admin/fines.html">
+            Fines
+        </a>
+
+        <a class="side-link" href="/admin/reports.html">
+            Reports
+        </a>
+
+        <a class="side-link" href="/admin/settings.html">
+            Settings
+        </a>
+
+        <button type="button" id="logout-btn" class="side-link">
+            Log Out
+        </button>
+    </nav>
+
+</aside>
+
+<!-- Main Content -->
+<main class="app-main">
+
+    <header class="app-header">
+
+        <span class="eyebrow">LNCT LIBRARY ADMIN</span>
+
+        <h1>Manage Books</h1>
+
+        <p>Add new books and manage your library catalogue.</p>
+
+    </header>
+
+    <!-- Message -->
+    <div
+            id="message"
+            class="message hidden"
+            role="status"
+            aria-live="polite">
+    </div>
+
+    <!-- Add Book Section -->
+    <section class="content-card">
+
+        <h2>Add a New Book</h2>
+
+        <form id="book-form" class="admin-form">
+
+            <label>
+                Book Title
+                <input
+                        type="text"
+                        name="title"
+                        placeholder="Enter book title"
+                        required>
+            </label>
+
+            <label>
+                Author
+                <input
+                        type="text"
+                        name="author"
+                        placeholder="Enter author name"
+                        required>
+            </label>
+
+            <label>
+                Category
+                <input
+                        type="text"
+                        name="category"
+                        value="General">
+            </label>
+
+            <label>
+                ISBN
+                <input
+                        type="text"
+                        name="isbn"
+                        placeholder="Enter ISBN">
+            </label>
+
+            <label>
+                Publisher
+                <input
+                        type="text"
+                        name="publisher"
+                        placeholder="Enter publisher name">
+            </label>
+
+            <label>
+                Publication Year
+                <input
+                        type="number"
+                        name="year"
+                        min="1000"
+                        max="9999"
+                        placeholder="e.g. 2025">
+            </label>
+
+            <label>
+                Quantity
+                <input
+                        type="number"
+                        name="quantity"
+                        min="0"
+                        value="1"
+                        required>
+            </label>
+
+            <label>
+                Rack Number
+                <input
+                        type="text"
+                        name="rack"
+                        value="A-01">
+            </label>
+
+            <label class="wide">
+                Description
+                <textarea
+                        name="description"
+                        rows="4"
+                        placeholder="Enter book description">
+          </textarea>
+            </label>
+
+            <div class="wide">
+                <button type="submit" class="btn btn-primary">
+                    Add Book
+                </button>
+            </div>
+
+        </form>
+
+    </section>
+
+    <!-- Book Catalogue -->
+    <section class="content-card">
+
+        <h2>Book Catalogue</h2>
+
+        <!-- Search Toolbar -->
+        <div class="toolbar">
+
+            <input
+                    type="search"
+                    id="book-search"
+                    placeholder="Search by title, author or ISBN..."
+                    aria-label="Search books">
+
+            <button
+                    type="button"
+                    id="search-books"
+                    class="btn btn-light">
+                Search
+            </button>
+
+        </div>
+
+        <!-- Books Table -->
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Available</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+
+                <tbody id="books-body">
+
+                <tr>
+                    <td colspan="6">Loading books...</td>
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- JavaScript Files -->
+<script src="/js/main.js"></script>
+<script src="/js/admin.js"></script>
+
+</body>
+</html>

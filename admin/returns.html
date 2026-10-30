@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Returns | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+
+<!-- Admin Sidebar -->
+<aside class="sidebar">
+
+    <a class="brand" href="/">
+        <span class="brand-mark">L</span>
+        <span>
+        LNCT
+        <small>ADMIN</small>
+      </span>
+    </a>
+
+    <nav>
+        <a class="side-link" href="/admin/index.html">
+            Overview
+        </a>
+
+        <a class="side-link" href="/admin/books.html">
+            Manage Books
+        </a>
+
+        <a class="side-link" href="/admin/students.html">
+            Students
+        </a>
+
+        <a class="side-link" href="/admin/issue-books.html">
+            Issues &amp; Returns
+        </a>
+
+        <a class="side-link active" href="/admin/returns.html">
+            Returns
+        </a>
+
+        <a class="side-link" href="/admin/fines.html">
+            Fines
+        </a>
+
+        <a class="side-link" href="/admin/reports.html">
+            Reports
+        </a>
+
+        <a class="side-link" href="/admin/settings.html">
+            Settings
+        </a>
+
+        <button
+                type="button"
+                id="logout-btn"
+                class="side-link">
+            Log Out
+        </button>
+    </nav>
+
+</aside>
+
+<!-- Main Content -->
+<main class="app-main">
+
+    <header class="app-header">
+
+      <span class="eyebrow">
+        LNCT LIBRARY ADMIN
+      </span>
+
+        <h1>Book Returns</h1>
+
+        <p>
+            Manage issued books, process returns and check overdue records.
+        </p>
+
+    </header>
+
+    <!-- Message -->
+    <div
+            id="message"
+            class="message hidden"
+            role="status"
+            aria-live="polite">
+    </div>
+
+    <!-- Returns Table -->
+    <section class="content-card">
+
+        <div class="card-heading">
+
+            <h2>Return Register</h2>
+
+            <button
+                    type="button"
+                    class="btn btn-light"
+                    onclick="window.location.reload()">
+                Refresh
+            </button>
+
+        </div>
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Student</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+
+                <tbody id="issues-body">
+
+                <tr>
+                    <td colspan="5">
+                        Loading return records...
+                    </td>
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- JavaScript -->
+<script src="/js/main.js"></script>
+<script src="/js/returns.js"></script>
+
+</body>
+</html>

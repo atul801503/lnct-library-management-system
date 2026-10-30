@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+<!-- Back to Home -->
+<a class="back-home" href="/">
+    &larr; Back to Home
+</a>
+
+<main class="auth-wrap">
+
+    <!-- Left Side -->
+    <section class="auth-side">
+
+        <a class="brand brand-light" href="/">
+            <span class="brand-mark">L</span>
+            <span>
+                    LNCT
+                    <small>LIBRARY</small>
+                </span>
+        </a>
+
+        <div>
+            <span class="eyebrow">WELCOME BACK</span>
+
+            <h1>
+                Knowledge is<br>
+                one login away.
+            </h1>
+
+            <p>
+                Sign in to manage your library journey.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Login Form -->
+    <section class="auth-panel">
+
+        <form id="login-form" class="auth-form">
+
+                <span class="eyebrow">
+                    STUDENT &amp; ADMIN ACCESS
+                </span>
+
+            <h2>Sign in to your account</h2>
+
+            <div
+                    id="message"
+                    class="message hidden"
+                    role="alert"
+            ></div>
+
+            <label for="email">
+                Email
+
+                <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                >
+            </label>
+
+            <label for="password">
+                Password
+
+                <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                >
+            </label>
+
+            <button
+                    class="btn btn-primary btn-full"
+                    type="submit"
+            >
+                Sign In
+            </button>
+
+            <p>
+                New user?
+                <a href="/register.html">Create account</a>
+            </p>
+
+        </form>
+
+    </section>
+
+</main>
+
+<!-- Common Footer -->
+<div id="site-footer"></div>
+
+<!-- JavaScript -->
+<script src="/js/main.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/footer.js"></script>
+
+</body>
+</html>

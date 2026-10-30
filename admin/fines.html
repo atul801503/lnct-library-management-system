@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fines | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+<!-- Admin Sidebar -->
+<aside class="sidebar">
+    <a class="brand" href="/">
+        <span class="brand-mark">L</span>
+        <span>
+        LNCT
+        <small>ADMIN</small>
+      </span>
+    </a>
+
+    <nav>
+        <a class="side-link" href="/admin/index.html">Overview</a>
+        <a class="side-link" href="/admin/books.html">Manage books</a>
+        <a class="side-link" href="/admin/students.html">Students</a>
+        <a class="side-link" href="/admin/issue-books.html">Issues &amp; Returns</a>
+        <a class="side-link" href="/admin/returns.html">Returns</a>
+        <a class="side-link active" href="/admin/fines.html">Fines</a>
+        <a class="side-link" href="/admin/reports.html">Reports</a>
+        <a class="side-link" href="/admin/settings.html">Settings</a>
+
+        <button type="button" id="logout-btn" class="side-link">
+            Log out
+        </button>
+    </nav>
+</aside>
+
+<!-- Main Content -->
+<main class="app-main">
+    <header class="app-header">
+        <span class="eyebrow">LNCT LIBRARY ADMIN</span>
+        <h1>Fines Register</h1>
+        <p>View returned books and their late-return fines.</p>
+    </header>
+
+    <section class="content-card">
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Student</th>
+                    <th>Return Date</th>
+                    <th>Fine (₹)</th>
+                </tr>
+                </thead>
+
+                <tbody id="fines-body">
+                <tr>
+                    <td colspan="4">Loading fines...</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script src="/js/main.js"></script>
+<script src="/js/fines.js"></script>
+</body>
+</html>

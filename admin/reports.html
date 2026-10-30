@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+
+<!-- Admin Sidebar -->
+<aside class="sidebar">
+
+    <a class="brand" href="/">
+        <span class="brand-mark">L</span>
+        <span>
+        LNCT
+        <small>ADMIN</small>
+      </span>
+    </a>
+
+    <nav>
+        <a class="side-link" href="/admin/index.html">
+            Overview
+        </a>
+
+        <a class="side-link" href="/admin/books.html">
+            Manage Books
+        </a>
+
+        <a class="side-link" href="/admin/students.html">
+            Students
+        </a>
+
+        <a class="side-link" href="/admin/issue-books.html">
+            Issues &amp; Returns
+        </a>
+
+        <a class="side-link" href="/admin/returns.html">
+            Returns
+        </a>
+
+        <a class="side-link" href="/admin/fines.html">
+            Fines
+        </a>
+
+        <a class="side-link active" href="/admin/reports.html">
+            Reports
+        </a>
+
+        <a class="side-link" href="/admin/settings.html">
+            Settings
+        </a>
+
+        <button
+                type="button"
+                id="logout-btn"
+                class="side-link">
+            Log Out
+        </button>
+    </nav>
+
+</aside>
+
+<!-- Main Content -->
+<main class="app-main">
+
+    <header class="app-header">
+
+      <span class="eyebrow">
+        LNCT LIBRARY ADMIN
+      </span>
+
+        <h1>Library Reports</h1>
+
+        <p>
+            View library statistics and monitor book circulation.
+        </p>
+
+    </header>
+
+    <!-- Report Statistics -->
+    <section class="stats cards">
+
+        <div class="stat-card">
+            <span>Total Books</span>
+            <strong id="totalBooks">—</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Total Students</span>
+            <strong id="totalStudents">—</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Active Issues</span>
+            <strong id="activeIssues">—</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Overdue Books</span>
+            <strong id="overdueIssues">—</strong>
+        </div>
+
+    </section>
+
+    <!-- Report Information -->
+    <section class="content-card">
+
+        <h2>Library Activity</h2>
+
+        <p>
+            This dashboard displays the current library statistics
+            retrieved from the LNCT Library database.
+        </p>
+
+        <button
+                type="button"
+                class="btn btn-primary"
+                onclick="window.location.reload()">
+            Refresh Reports
+        </button>
+
+    </section>
+
+</main>
+
+<!-- JavaScript -->
+<script src="/js/main.js"></script>
+<script src="/js/admin.js"></script>
+
+</body>
+</html>

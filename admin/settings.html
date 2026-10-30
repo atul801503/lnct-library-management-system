@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+
+<!-- Admin Sidebar -->
+<aside class="sidebar">
+
+    <a class="brand" href="/">
+        <span class="brand-mark">L</span>
+        <span>
+        LNCT
+        <small>ADMIN</small>
+      </span>
+    </a>
+
+    <nav>
+        <a class="side-link" href="/admin/index.html">
+            Overview
+        </a>
+
+        <a class="side-link" href="/admin/books.html">
+            Manage Books
+        </a>
+
+        <a class="side-link" href="/admin/students.html">
+            Students
+        </a>
+
+        <a class="side-link" href="/admin/issue-books.html">
+            Issues &amp; Returns
+        </a>
+
+        <a class="side-link" href="/admin/returns.html">
+            Returns
+        </a>
+
+        <a class="side-link" href="/admin/fines.html">
+            Fines
+        </a>
+
+        <a class="side-link" href="/admin/reports.html">
+            Reports
+        </a>
+
+        <a class="side-link active" href="/admin/settings.html">
+            Settings
+        </a>
+
+        <button
+                type="button"
+                id="logout-btn"
+                class="side-link">
+            Log Out
+        </button>
+    </nav>
+
+</aside>
+
+<!-- Main Content -->
+<main class="app-main">
+
+    <header class="app-header">
+
+      <span class="eyebrow">
+        LNCT LIBRARY ADMIN
+      </span>
+
+        <h1>Settings</h1>
+
+        <p>
+            Manage your library configuration and security information.
+        </p>
+
+    </header>
+
+    <!-- Security Settings -->
+    <section class="content-card">
+
+        <h2>Security Configuration</h2>
+
+        <p>
+            Configure your admin credentials and SESSION_SECRET
+            in your private <strong>.env</strong> file.
+        </p>
+
+        <p>
+            Never share your .env file or upload it to GitHub.
+            Keep your MongoDB connection string and admin password private.
+        </p>
+
+        <div class="message">
+            <strong>Security Reminder:</strong>
+            Protect your database credentials and session secret.
+        </div>
+
+    </section>
+
+    <!-- Library Fine Settings -->
+    <section class="content-card">
+
+        <h2>Library Fine Settings</h2>
+
+        <div class="stat-card">
+            <span>Late Return Fine</span>
+            <strong>₹5 / Day</strong>
+        </div>
+
+        <p>
+            A fine of ₹5 per day is charged for books returned
+            after their due date.
+        </p>
+
+    </section>
+
+    <!-- System Information -->
+    <section class="content-card">
+
+        <h2>System Information</h2>
+
+        <p>
+            <strong>System Name:</strong>
+            LNCT Library Management System
+        </p>
+
+        <p>
+            <strong>Backend:</strong>
+            Node.js and Express.js
+        </p>
+
+        <p>
+            <strong>Database:</strong>
+            MongoDB
+        </p>
+
+        <p>
+            <strong>Frontend:</strong>
+            HTML, CSS and JavaScript
+        </p>
+
+    </section>
+
+</main>
+
+<!-- JavaScript -->
+<script src="/js/main.js"></script>
+<script src="/js/admin.js"></script>
+
+</body>
+</html>

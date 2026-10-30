@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",async()=>{try{const {user}=await api("/api/auth/me");if(!user){location.href="/login.html";return}const d=await api("/api/dashboard");["totalBooks","availableCopies","totalStudents","activeIssues","overdueIssues"].forEach(k=>{const e=document.getElementById(k);if(e)e.textContent=d[k]??0})}catch(e){showMessage(e.message,true)}});

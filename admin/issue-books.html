@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Issues & Returns | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+
+<!-- Admin Sidebar -->
+<aside class="sidebar">
+
+    <a class="brand" href="/">
+        <span class="brand-mark">L</span>
+        <span>
+        LNCT
+        <small>ADMIN</small>
+      </span>
+    </a>
+
+    <nav>
+        <a class="side-link" href="/admin/index.html">
+            Overview
+        </a>
+
+        <a class="side-link" href="/admin/books.html">
+            Manage Books
+        </a>
+
+        <a class="side-link" href="/admin/students.html">
+            Students
+        </a>
+
+        <a class="side-link active" href="/admin/issue-books.html">
+            Issues &amp; Returns
+        </a>
+
+        <a class="side-link" href="/admin/returns.html">
+            Returns
+        </a>
+
+        <a class="side-link" href="/admin/fines.html">
+            Fines
+        </a>
+
+        <a class="side-link" href="/admin/reports.html">
+            Reports
+        </a>
+
+        <a class="side-link" href="/admin/settings.html">
+            Settings
+        </a>
+
+        <button
+                type="button"
+                id="logout-btn"
+                class="side-link">
+            Log Out
+        </button>
+    </nav>
+
+</aside>
+
+<!-- Main Content -->
+<main class="app-main">
+
+    <header class="app-header">
+
+      <span class="eyebrow">
+        LNCT LIBRARY ADMIN
+      </span>
+
+        <h1>Issue &amp; Return Books</h1>
+
+        <p>
+            Issue books to registered students and manage return records.
+        </p>
+
+    </header>
+
+    <!-- Message -->
+    <div
+            id="message"
+            class="message hidden"
+            role="status"
+            aria-live="polite">
+    </div>
+
+    <!-- Issue Book Form -->
+    <section class="content-card">
+
+        <h2>Issue a Book</h2>
+
+        <form id="issue-form" class="admin-form">
+
+            <label>
+                Select Student
+
+                <select
+                        id="student-select"
+                        name="studentId"
+                        required>
+
+                    <option value="">Loading students...</option>
+
+                </select>
+            </label>
+
+            <label>
+                Select Book
+
+                <select
+                        id="book-select"
+                        name="bookId"
+                        required>
+
+                    <option value="">Loading books...</option>
+
+                </select>
+            </label>
+
+            <label>
+                Due Date
+
+                <input
+                        type="date"
+                        id="dueDate"
+                        name="dueDate"
+                        required>
+            </label>
+
+            <div class="wide">
+                <button
+                        type="submit"
+                        class="btn btn-primary">
+                    Issue Book
+                </button>
+            </div>
+
+        </form>
+
+    </section>
+
+    <!-- Issue Register -->
+    <section class="content-card">
+
+        <div class="card-heading">
+
+            <h2>Issue Register</h2>
+
+            <button
+                    type="button"
+                    id="refresh-issues"
+                    class="btn btn-light">
+                Refresh
+            </button>
+
+        </div>
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Student</th>
+                    <th>Issue Date</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+
+                <tbody id="issues-body">
+
+                <tr>
+                    <td colspan="6">
+                        Loading issue records...
+                    </td>
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- JavaScript -->
+<script src="/js/main.js"></script>
+<script src="/js/issue-books.js"></script>
+
+</body>
+</html>

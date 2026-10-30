@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+<!-- Back to Home -->
+<a class="back-home" href="/">
+    &larr; Back to Home
+</a>
+
+<main class="auth-wrap">
+
+    <!-- Left Side -->
+    <section class="auth-side">
+
+        <a class="brand brand-light" href="/">
+            <span class="brand-mark">L</span>
+            <span>
+                    LNCT
+                    <small>LIBRARY</small>
+                </span>
+        </a>
+
+        <div>
+            <span class="eyebrow">GET STARTED</span>
+
+            <h1>
+                Join the<br>
+                LNCT Library
+            </h1>
+
+            <p>
+                Create your student account and explore the library.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Registration Form -->
+    <section class="auth-panel">
+
+        <form id="register-form" class="auth-form">
+
+            <span class="eyebrow">STUDENT REGISTRATION</span>
+
+            <h2>Create Account</h2>
+
+            <div
+                    id="message"
+                    class="message hidden"
+                    role="alert"
+            ></div>
+
+            <label for="name">
+                Full Name
+
+                <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                >
+            </label>
+
+            <label for="studentId">
+                Student ID
+
+                <input
+                        id="studentId"
+                        name="studentId"
+                        type="text"
+                        placeholder="Enter your student ID"
+                >
+            </label>
+
+            <label for="email">
+                Email
+
+                <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                >
+            </label>
+
+            <label for="password">
+                Password (8+ characters)
+
+                <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        placeholder="Create a password"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required
+                >
+            </label>
+
+            <label for="course">
+                Course
+
+                <input
+                        id="course"
+                        name="course"
+                        type="text"
+                        value="MCA"
+                >
+            </label>
+
+            <label for="semester">
+                Semester
+
+                <input
+                        id="semester"
+                        name="semester"
+                        type="number"
+                        min="1"
+                        max="8"
+                        value="2"
+                >
+            </label>
+
+            <button
+                    class="btn btn-primary btn-full"
+                    type="submit"
+            >
+                Create Account
+            </button>
+
+            <p>
+                Already registered?
+                <a href="/login.html">Sign In</a>
+            </p>
+
+        </form>
+
+    </section>
+
+</main>
+
+<!-- Common Footer -->
+<div id="site-footer"></div>
+
+<!-- JavaScript -->
+<script src="/js/main.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/footer.js"></script>
+
+</body>
+</html>

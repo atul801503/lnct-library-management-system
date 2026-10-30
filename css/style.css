@@ -1,0 +1,1134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =====================================
+   1. ROOT VARIABLES & RESET
+===================================== */
+
+:root {
+    --navy: #102b50;
+    --blue: #245fc2;
+    --blue-dark: #174b9b;
+    --pale: #edf4ff;
+    --bg: #f4f7fc;
+    --muted: #6d7d91;
+    --border: #dfe7f2;
+    --white: #ffffff;
+    --red: #c93838;
+    --green: #18794e;
+    --shadow: 0 8px 25px rgba(16, 43, 80, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--navy);
+    background: var(--bg);
+    line-height: 1.55;
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =====================================
+   2. NAVBAR
+===================================== */
+
+.topbar {
+    width: 100%;
+    min-height: 72px;
+    padding: 14px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 100;
+}
+
+.topbar nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.topbar nav a {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.topbar nav a:hover,
+.topbar nav a.active {
+    color: var(--blue);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.brand small {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.brand-mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 13px;
+    background: #153f7b;
+    color: var(--white);
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+}
+
+/* =====================================
+   3. BUTTONS
+===================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--blue-dark);
+}
+
+.btn-light {
+    background: var(--pale);
+    color: var(--navy);
+}
+
+.btn-light:hover {
+    background: #dceaff;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* =====================================
+   4. HERO SECTION
+===================================== */
+
+.hero,
+.page {
+    width: 100%;
+    max-width: 1240px;
+    margin: auto;
+    padding: 60px 28px;
+}
+
+.hero {
+    padding-top: 100px;
+    min-height: 70vh;
+}
+
+.hero h1 {
+    margin: 15px 0;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.06;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero p {
+    max-width: 620px;
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: var(--blue);
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 24px 0;
+}
+
+/* =====================================
+   5. PAGE HEADINGS
+===================================== */
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin: 8px 0;
+    font-size: 32px;
+}
+
+.page-header p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =====================================
+   6. DASHBOARD STATISTICS
+===================================== */
+
+.stats {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.stats > div,
+.stat-card {
+    min-width: 150px;
+    padding: 20px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.stats strong,
+.stat-card strong {
+    display: block;
+    font-size: 25px;
+}
+
+.stat-card {
+    color: var(--muted);
+}
+
+.stat-card strong {
+    color: var(--navy);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* =====================================
+   7. CONTENT CARDS
+===================================== */
+
+.content-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 22px 0;
+    box-shadow: var(--shadow);
+}
+
+.content-card h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+/* =====================================
+   8. FORMS & INPUTS
+===================================== */
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    background: var(--white);
+    border-radius: 9px;
+    padding: 12px 14px;
+    color: var(--navy);
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(36, 95, 194, 0.1);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.admin-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+}
+
+.wide {
+    grid-column: 1 / -1;
+}
+
+/* =====================================
+   9. MESSAGES
+===================================== */
+
+.message {
+    padding: 13px 16px;
+    border-radius: 9px;
+    background: #eaf7ef;
+    color: var(--green);
+    margin: 18px 0;
+    font-size: 14px;
+}
+
+.message.error {
+    background: #fff0f0;
+    color: var(--red);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =====================================
+   10. TABLES
+===================================== */
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+}
+
+th {
+    background: #f7f9fd;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+tbody tr:hover {
+    background: #f8faff;
+}
+
+/* =====================================
+   11. BOOK GRID
+===================================== */
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.book-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    transition: 0.2s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.book-card .cover {
+    height: 130px;
+    background: var(--pale);
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* =====================================
+   12. AUTH PAGES
+===================================== */
+
+.auth-body {
+    min-height: 100vh;
+}
+
+.back-home {
+    display: inline-block;
+    margin: 20px 4%;
+    font-weight: 600;
+}
+
+.auth-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1100px;
+    min-height: 600px;
+    margin: 0 auto 40px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.auth-side {
+    background: #143d76;
+    color: var(--white);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.auth-side .brand {
+    color: var(--white);
+}
+
+.auth-side h1 {
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.auth-side p {
+    color: #d7e5fa;
+}
+
+.auth-panel {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 430px;
+}
+
+.auth-form h2 {
+    font-size: 28px;
+    margin: 12px 0 20px;
+}
+
+.auth-form p {
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+/* =====================================
+   13. ADMIN SIDEBAR
+===================================== */
+
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    background: var(--white);
+    border-right: 1px solid var(--border);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.app-body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.side-link {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 9px;
+    color: #62758d;
+    background: transparent;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.side-link:hover,
+.side-link.active {
+    background: var(--pale);
+    color: var(--blue);
+}
+
+.app-main {
+    flex: 1;
+    min-width: 0;
+    padding: 30px 4%;
+}
+
+.app-header {
+    margin-bottom: 25px;
+}
+
+.app-header h1 {
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.app-header p {
+    color: var(--muted);
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.logout-btn {
+    border: 0;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* =====================================
+   14. COMMON FOOTER
+===================================== */
+
+.main-footer {
+    width: 100%;
+    margin-top: 60px;
+    background: #102b50;
+    color: var(--white);
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 55px 25px 40px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 35px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--white);
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-logo small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #cbd5e1;
+}
+
+.footer-logo-icon {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    background: #2563c9;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.footer-about p {
+    max-width: 320px;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-column h3 {
+    margin: 0 0 10px;
+    font-size: 17px;
+    color: var(--white);
+}
+
+.footer-column a {
+    color: #cbd5e1;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.footer-column a:hover {
+    color: var(--white);
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 25px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+/* =====================================
+   15. RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 1000px) {
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .topbar nav {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero,
+    .page {
+        padding: 35px 18px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .auth-wrap {
+        grid-template-columns: 1fr;
+        margin: 0 15px 30px;
+    }
+
+    .auth-side {
+        min-height: 260px;
+        padding: 25px;
+    }
+
+    .auth-side h1 {
+        font-size: 30px;
+    }
+
+    .auth-panel {
+        padding: 25px 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .app-body {
+        flex-direction: column;
+    }
+
+    .app-main {
+        width: 100%;
+        padding: 25px 18px;
+    }
+
+    .app-header h1 {
+        font-size: 26px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .brand {
+        font-size: 16px;
+    }
+
+    .brand-mark {
+        width: 39px;
+        height: 39px;
+    }
+
+    .topbar nav {
+        gap: 10px;
+    }
+
+    .topbar nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form {
+        grid-template-columns: 1fr;
+    }
+
+    .wide {
+        grid-column: auto;
+    }
+
+    .content-card {
+        padding: 17px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions .btn {
+        width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+/* COMMON FOOTER */
+
+.main-footer {
+    width: 100%;
+    margin-top: 60px;
+    background: #102b50;
+    color: #fff;
+}
+
+.footer-container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 55px 25px 40px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 35px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.footer-logo small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #cbd5e1;
+}
+
+.footer-logo-icon {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    background: #2563c9;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.footer-about p {
+    max-width: 320px;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-column h3 {
+    margin: 0 0 10px;
+    font-size: 17px;
+    color: #fff;
+}
+
+.footer-column a {
+    color: #cbd5e1;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-column a:hover {
+    color: #fff;
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 25px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+#site-navbar .topbar {
+    width: 100%;
+    min-height: 72px;
+    padding: 14px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #dfe7f2;
+}
+
+#site-navbar nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#site-navbar nav a {
+    color: #102b50;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#site-navbar nav a:hover {
+    color: #245fc2;
+}
+
+@media (max-width: 768px) {
+    #site-navbar .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #site-navbar nav {
+        gap: 12px;
+    }
+}
+
+
+/* ==============================
+   LNCT LIBRARY NAVBAR
+============================== */
+
+.topbar {
+    width: 100%;
+    min-height: 90px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
+}
+
+/* Logo */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #102b50;
+    flex-shrink: 0;
+}
+
+.brand-mark {
+    width: 55px;
+    height: 55px;
+    border-radius: 17px;
+    background: #19477f;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.brand-name,
+.brand > span:last-child {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.brand small {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #64748b;
+}
+
+/* Navigation */
+
+.topbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 22px;
+}
+
+.topbar nav a {
+    color: #102b50;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.topbar nav a:hover,
+.topbar nav a.active {
+    color: #2563eb;
+}
+
+/* Logout Button */
+
+.topbar nav .btn {
+    min-height: 54px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 14px;
+    background: #edf3ff;
+    color: #102b50;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.topbar nav .btn:hover {
+    background: #dce8ff;
+}
+
+/* Register Button */
+
+.topbar nav .nav-register {
+    padding: 13px 20px;
+    border-radius: 12px;
+    background: #edf3ff;
+}
+
+/* Responsive Navbar */
+
+@media (max-width: 1000px) {
+    .topbar {
+        padding: 15px 3%;
+        flex-wrap: wrap;
+    }
+
+    .topbar nav {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        justify-content: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .brand {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .topbar nav {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .topbar nav a {
+        font-size: 13px;
+    }
+
+    .topbar nav .btn {
+        min-height: 40px;
+        padding: 0 15px;
+    }
+}

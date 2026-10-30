@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Books | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/books.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+<!-- Common Dynamic Navbar -->
+<div id="site-navbar"></div>
+
+<!-- Main Content -->
+<main class="page">
+
+    <!-- Page Heading -->
+    <section class="page-header">
+        <span class="eyebrow">LNCT LIBRARY</span>
+
+        <h1>Book Catalogue</h1>
+
+        <p>
+            Explore our library collection and find your favourite books.
+        </p>
+    </section>
+
+    <!-- Search Section -->
+    <section class="content-card">
+
+        <div class="toolbar">
+
+            <input
+                    type="search"
+                    id="book-search"
+                    placeholder="Search by title, author or ISBN..."
+                    aria-label="Search books"
+            >
+
+            <button
+                    type="button"
+                    id="search-books"
+                    class="btn btn-primary"
+            >
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Books Grid -->
+    <section
+            id="books-grid"
+            class="book-grid"
+            aria-live="polite"
+    >
+        <p>Loading books...</p>
+    </section>
+
+</main>
+
+<!-- Common Footer -->
+<div id="site-footer"></div>
+
+<!-- JavaScript -->
+<script src="/js/navbar.js"></script>
+<script src="/js/footer.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/books.js"></script>
+
+</body>
+</html>

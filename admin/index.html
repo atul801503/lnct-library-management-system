@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Overview | LNCT Library</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+<!-- Admin Sidebar -->
+<aside class="sidebar">
+    <a class="brand" href="/">
+        <span class="brand-mark">L</span>
+        <span>
+        LNCT
+        <small>ADMIN</small>
+      </span>
+    </a>
+
+    <nav>
+        <a class="side-link active" href="/admin/index.html">
+            Overview
+        </a>
+
+        <a class="side-link" href="/admin/books.html">
+            Manage Books
+        </a>
+
+        <a class="side-link" href="/admin/students.html">
+            Students
+        </a>
+
+        <a class="side-link" href="/admin/issue-books.html">
+            Issues &amp; Returns
+        </a>
+
+        <a class="side-link" href="/admin/returns.html">
+            Returns
+        </a>
+
+        <a class="side-link" href="/admin/fines.html">
+            Fines
+        </a>
+
+        <a class="side-link" href="/admin/reports.html">
+            Reports
+        </a>
+
+        <a class="side-link" href="/admin/settings.html">
+            Settings
+        </a>
+
+        <button type="button" id="logout-btn" class="side-link">
+            Log Out
+        </button>
+    </nav>
+</aside>
+
+<!-- Main Dashboard -->
+<main class="app-main">
+    <header class="app-header">
+        <span class="eyebrow">LNCT LIBRARY ADMIN</span>
+
+        <h1>Library Overview</h1>
+
+        <p>Manage your library and monitor its current activity.</p>
+    </header>
+
+    <!-- Dashboard Statistics -->
+    <section class="stats cards">
+        <div class="stat-card">
+            <span>Total Books</span>
+            <strong id="totalBooks">—</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Available Copies</span>
+            <strong id="availableCopies">—</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Students</span>
+            <strong id="totalStudents">—</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Active Issues</span>
+            <strong id="activeIssues">—</strong>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="content-card">
+        <h2>Quick Actions</h2>
+
+        <div class="actions">
+            <a class="btn btn-primary" href="/admin/books.html">
+                Manage Books
+            </a>
+
+            <a class="btn btn-light" href="/admin/issue-books.html">
+                Issue a Book
+            </a>
+
+            <a class="btn btn-light" href="/admin/students.html">
+                View Students
+            </a>
+
+            <a class="btn btn-light" href="/admin/reports.html">
+                View Reports
+            </a>
+        </div>
+    </section>
+</main>
+
+<!-- JavaScript -->
+<script src="/js/main.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>
